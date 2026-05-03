@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════
+   Base Layer: Global Resets & Defaults
+   ═══════════════════════════════════════ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom text selection to match accent brand color */
+  ::selection {
+    background-color: rgba(0, 210, 137, 0.25);
+    color: #ffffff;
+  }
+
+  /* Accessible focus ring using accent color */
+  *:focus-visible {
+    outline: 2px solid #00d289;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* ═══════════════════════════════════════
+   Custom Scrollbar — Dark Theme
+   ═══════════════════════════════════════ */
+
+/* Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #222222 #0a0a0a;
+}
